@@ -55,7 +55,7 @@ describe("authentication", () => {
     });
   });
 
-  context("invalid flow register (did not submit)", () => {
+  context("register flow (did not submit)", () => {
     beforeEach(() => {
       cy.visit("/");
       cy.get('[data-test="signup"]').click()
@@ -77,7 +77,7 @@ describe("authentication", () => {
       cy.get('[data-test="signup-submit"]').should('be.disabled');
     });
 
-    it("all value valid", () => {
+    it("all value valid (did not submit)", () => {
       cy.get('[data-test="signup-first-name"]').type('aa')
       cy.get('[data-test="signup-last-name"]').type('aa')
       cy.get('[data-test="signup-username"]').type('aa')
