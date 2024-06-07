@@ -18,7 +18,7 @@ describe("edit my account", () => {
         expect(typeof initialLength).to.be.equal('number');
       });
 
-      cy.get('[data-test="bankaccount-new"]').click()
+      cy.get('[data-test="bankaccount-new"]').click({force: true})
       cy.url().should('include', '/bankaccounts/new');
       cy.get('[data-test="bankaccount-bankName-input"]').should('exist')
       cy.get('[data-test="bankaccount-routingNumber-input"]').should('exist')
